@@ -1,0 +1,30 @@
+{
+  "productName": "system-monitor-dashboard",
+  "version": "0.1.0",
+  "identifier": "com.user.sysmonitor",
+  "app": {
+    "windows": [
+      {
+        "title": "System Monitor",
+        "width": 1000,
+        "height": 700,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "rpm",
+      "deb"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

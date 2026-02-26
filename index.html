@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Monitor</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>⚙ System Monitor</h1>
+      <span id="last-updated">--</span>
+    </header>
+
+    <div class="grid">
+      <!-- CPU Card -->
+      <div class="card">
+        <div class="card-header">
+          <h2>CPU Usage</h2>
+          <span class="badge" id="cpu-cores">-- cores</span>
+        </div>
+        <div class="big-number" id="cpu-usage">--%</div>
+        <div class="progress-track">
+          <div class="progress-bar cpu-bar" id="cpu-bar"></div>
+        </div>
+      </div>
+
+      <!-- Memory Card -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Memory</h2>
+          <span class="badge" id="mem-total">-- MB total</span>
+        </div>
+        <div class="big-number" id="mem-usage">--%</div>
+        <div class="progress-track">
+          <div class="progress-bar mem-bar" id="mem-bar"></div>
+        </div>
+        <div class="subtext" id="mem-detail">-- MB used</div>
+      </div>
+    </div>
+
+    <!-- Process Table -->
+    <div class="card full-width">
+      <div class="card-header">
+        <h2>Top Processes</h2>
+        <span class="badge">by CPU</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Process</th>
+            <th>CPU %</th>
+            <th>Memory</th>
+            <th>CPU Bar</th>
+          </tr>
+        </thead>
+        <tbody id="proc-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.ts"></script>
+</body>
+
+</html>
